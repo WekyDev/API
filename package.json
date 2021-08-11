@@ -1,0 +1,26 @@
+{
+  "name": "gw",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ImFace/gw.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ImFace/gw/issues"
+  },
+  "homepage": "https://github.com/ImFace/gw#readme",
+  "dependencies": {
+    "dotenv": "^10.0.0",
+    "eslint": "^7.32.0",
+    "mongoose": "^5.13.6",
+    "node-fetch": "^2.6.1"
+  }
+}
