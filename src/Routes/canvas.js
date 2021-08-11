@@ -63,6 +63,22 @@ route.get('/pray', async (req, res) => {
 	res.status(200).send(canvas.toBuffer());
 });
 
+route.get('/rifleshoot', async (req, res) => {
+	if (!req.query.image) return res.status(400).send({ error: true, message: 'API: Missing image parameter.' });
+
+	const bg = await loadImage(__dirname + '/../Assets/rifleshoot.png');
+	const img = await loadImage(req.query.image);
+	const canvas = createCanvas(318, 299);
+	const ctx = canvas.getContext('2d');
+
+	ctx.drawImage(img, 55, 28, 118, 118);
+	ctx.drawImage(bg, 0, 0, 318, 299);
+
+	res.set({ 'Content-Type': 'image/png' });
+	res.status(200).send(canvas.toBuffer());
+});
+
+
 route.get('/pressplay', async (req, res) => {
 	if (!req.query.image) return res.status(400).send({ error: true, message: 'API: Missing image parameter.' });
 
