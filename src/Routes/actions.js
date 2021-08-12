@@ -11,121 +11,223 @@ async function search(gif) {
 route.get('/hug', async (req, res) => {
 	const result = await search('anime-hug');
 
-	res.status(200).send({ error: false, result: result });
+	return res.send(200).send({ error: false, result: result });
+});
+
+route.get('/headbang', async (req, res) => {
+	const result = await search('anime-headbang');
+
+	return res.send(200).send({ error: false, result: result });
+});
+
+route.get('/punch', async (req, res) => {
+	const result = await search('anime-punch');
+
+	return res.send(200).send({ error: false, result: result });
+});
+
+route.get('/kill', async (req, res) => {
+	const result = await search('anime-kill');
+
+	return res.send(200).send({ error: false, result: result });
+});
+
+route.get('/yay', async (req, res) => {
+	const result = await search('anime-yay');
+
+	return res.send(200).send({ error: false, result: result });
+});
+
+route.get('/yes', async (req, res) => {
+	const result = await search('anime-yes');
+
+	return res.send(200).send({ error: false, result: result });
+});
+
+route.get('/no', async (req, res) => {
+	const result = await search('anime-no');
+
+	return res.send(200).send({ error: false, result: result });
+});
+
+route.get('/poke', async (req, res) => {
+	const result = await search('anime-poke');
+
+	return res.send(200).send({ error: false, result: result });
+});
+
+route.get('/bite', async (req, res) => {
+	const result = await search('anime-bite');
+
+	return res.send(200).send({ error: false, result: result });
+});
+
+route.get('/cuddle', async (req, res) => {
+	const result = await search('anime-cuddle');
+
+	return res.send(200).send({ error: false, result: result });
+});
+
+route.get('/dance', async (req, res) => {
+	const result = await search('anime-dance');
+
+	return res.send(200).send({ error: false, result: result });
+});
+
+route.get('/smack', async (req, res) => {
+	const result = await search('anime-smack');
+
+	return res.send(200).send({ error: false, result: result });
+});
+
+route.get('/sleep', async (req, res) => {
+	const result = await search('anime-laugh');
+
+	return res.send(200).send({ error: false, result: result });
 });
 
 route.get('/kiss', async (req, res) => {
 	const result = await search('anime-kiss');
 
-	res.status(200).send({ error: false, result: result });
+	return res.send(200).send({ error: false, result: result });
 });
 
 route.get('/run', async (req, res) => {
 	const result = await search('anime-run');
 
-	res.status(200).send({ error: false, result: result });
+	return res.send(200).send({ error: false, result: result });
 });
 
 route.get('/laugh', async (req, res) => {
 	const result = await search('anime-laugh');
 
-	res.status(200).send({ error: false, result: result });
+	return res.send(200).send({ error: false, result: result });
 });
 
 route.get('/cry', async (req, res) => {
 	const result = await search('anime-cry');
 
-	res.status(200).send({ error: false, result: result });
+	return res.send(200).send({ error: false, result: result });
+});
+
+route.get('/smug', async (req, res) => {
+	const result = await search('anime-smug');
+
+	return res.send(200).send({ error: false, result: result });
+});
+
+route.get('/sorry', async (req, res) => {
+	const result = await search('anime-sorry');
+
+	return res.send(200).send({ error: false, result: result });
+});
+
+route.get('/stare', async (req, res) => {
+	const result = await search('anime-stare');
+
+	return res.send(200).send({ error: false, result: result });
+});
+
+route.get('/lick', async (req, res) => {
+	const result = await search('anime-lick');
+
+	return res.send(200).send({ error: false, result: result });
+});
+
+route.get('/clap', async (req, res) => {
+	const result = await search('anime-clap');
+
+	return res.send(200).send({ error: false, result: result });
 });
 
 route.get('/happy', async (req, res) => {
 	const result = await search('anime-happy');
 
-	res.status(200).send({ error: false, result: result });
+	return res.send(200).send({ error: false, result: result });
 });
 
 route.get('/hello', async (req, res) => {
 	const result = await search('anime-hello');
 
-	res.status(200).send({ error: false, result: result });
+	return res.send(200).send({ error: false, result: result });
 });
 
 route.get('/bye', async (req, res) => {
 	const result = await search('anime-bye');
 
-	res.status(200).send({ error: false, result: result });
+	return res.send(200).send({ error: false, result: result });
 });
 
 route.get('/confused', async (req, res) => {
 	const result = await search('anime-confused');
 
-	res.status(200).send({ error: false, result: result });
+	return res.send(200).send({ error: false, result: result });
 });
 
 route.get('/blush', async (req, res) => {
 	const result = await search('anime-blush');
 
-	res.status(200).send({ error: false, result: result });
+	return res.send(200).send({ error: false, result: result });
 });
 
 route.get('/wink', async (req, res) => {
 	const result = await search('anime-wink');
 
-	res.status(200).send({ error: false, result: result });
+	return res.send(200).send({ error: false, result: result });
 });
 
 route.get('/shy', async (req, res) => {
 	const result = await search('anime-shy');
 
-	res.status(200).send({ error: false, result: result });
+	return res.send(200).send({ error: false, result: result });
 });
 
 route.get('/dizzy', async (req, res) => {
 	const result = await search('anime-dizzy');
 
-	res.status(200).send({ error: false, result: result });
+	return res.send(200).send({ error: false, result: result });
 });
 
 route.get('/vomit', async (req, res) => {
 	const result = await search('anime-vomit');
 
-	res.status(200).send({ error: false, result: result });
+	return res.send(200).send({ error: false, result: result });
 });
 
 route.get('/bored', async (req, res) => {
 	const result = await search('anime-bored');
 
-	res.status(200).send({ error: false, result: result });
+	return res.send(200).send({ error: false, result: result });
 });
 
 route.get('/tired', async (req, res) => {
 	const result = await search('anime-tired');
 
-	res.status(200).send({ error: false, result: result });
+	return res.send(200).send({ error: false, result: result });
 });
 
 route.get('/neutral', async (req, res) => {
 	const result = await search('anime-neutral');
 
-	res.status(200).send({ error: false, result: result });
+	return res.send(200).send({ error: false, result: result });
 });
 
 route.get('/thinking', async (req, res) => {
 	const result = await search('anime-thinking');
 
-	res.status(200).send({ error: false, result: result });
+	return res.send(200).send({ error: false, result: result });
 });
 
 route.get('/angry', async (req, res) => {
 	const result = await search('anime-angry');
 
-	res.status(200).send({ error: false, result: result });
+	return res.send(200).send({ error: false, result: result });
 });
 
 route.get('/surprised', async (req, res) => {
 	const result = await search('anime-surprised');
 
-	res.status(200).send({ error: false, result: result });
+	return res.send(200).send({ error: false, result: result });
 });
 
 module.exports = {
