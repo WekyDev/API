@@ -124,6 +124,24 @@ route.get('/bestmeme', async (req, res) => {
 	return res.send(200).send(canvas.toBuffer());
 });
 
+route.get('/robert', async (req, res) => {
+	if (!req.query.image) return res.send(400).send({ error: true, message: 'API: Missing image parameter.' });
+
+	const bg = await loadImage(__dirname + '/../Assets/robert.png');
+	const glasses = await loadImage(__dirname + '/../Assets/glasses.png');
+	const img = await loadImage(req.query.image);
+	const canvas = createCanvas(295, 406);
+	const ctx = canvas.getContext('2d');
+
+	ctx.drawImage(img, 50, 115, 53, 53);
+	ctx.drawImage(img, 218, 115, 53, 53);
+	ctx.drawImage(glasses, 62, 130, 36, 19);
+	ctx.drawImage(bg, 0, 0, 295, 406);
+
+	res.set({ 'Content-Type': 'image/png' });
+	return res.send(200).send(canvas.toBuffer());
+});
+
 route.get('/saveonlyone', async (req, res) => {
 	if (!req.query.image) return res.send(400).send({ error: true, message: 'API: Missing image parameter.' });
 	if (!req.query.image2) return res.send(400).send({ error: true, message: 'API: Missing image2 parameter.' });
