@@ -4,7 +4,7 @@ const { loadImage, createCanvas } = require('canvas');
 const route = Router();
 
 route.get('/gun', async (req, res) => {
-	if (!req.query.image) return res.send(400).send({ error: true, message: 'API: Missing image parameter.' });
+	if (!req.query.image) return res.status(400).send({ error: true, message: 'API: Missing image parameter.' });
 
 	const bg = await loadImage(__dirname + '/../Assets/gun.png');
 	const img = await loadImage(req.query.image);
@@ -15,11 +15,11 @@ route.get('/gun', async (req, res) => {
 	ctx.drawImage(bg, -70, 190, 350, 350);
 
 	res.set({ 'Content-Type': 'image/png' });
-	return res.send(200).send(canvas.toBuffer());
+	return res.status(200).send(canvas.toBuffer());
 });
 
 route.get('/mask', async (req, res) => {
-	if (!req.query.image) return res.send(400).send({ error: true, message: 'API: Missing image parameter.' });
+	if (!req.query.image) return res.status(400).send({ error: true, message: 'API: Missing image parameter.' });
 
 	const bg = await loadImage(__dirname + '/../Assets/mask.png');
 	const img = await loadImage(req.query.image);
@@ -30,11 +30,11 @@ route.get('/mask', async (req, res) => {
 	ctx.drawImage(bg, 0, 0, 1080, 960);
 
 	res.set({ 'Content-Type': 'image/png' });
-	return res.send(200).send(canvas.toBuffer());
+	return res.status(200).send(canvas.toBuffer());
 });
 
 route.get('/whodidthis', async (req, res) => {
-	if (!req.query.image) return res.send(400).send({ error: true, message: 'API: Missing image parameter.' });
+	if (!req.query.image) return res.status(400).send({ error: true, message: 'API: Missing image parameter.' });
 
 	const bg = await loadImage(__dirname + '/../Assets/whodidthis.png');
 	const img = await loadImage(req.query.image);
@@ -45,11 +45,11 @@ route.get('/whodidthis', async (req, res) => {
 	ctx.drawImage(bg, 0, 0, 512, 512);
 
 	res.set({ 'Content-Type': 'image/png' });
-	return res.send(200).send(canvas.toBuffer());
+	return res.status(200).send(canvas.toBuffer());
 });
 
 route.get('/pray', async (req, res) => {
-	if (!req.query.image) return res.send(400).send({ error: true, message: 'API: Missing image parameter.' });
+	if (!req.query.image) return res.status(400).send({ error: true, message: 'API: Missing image parameter.' });
 
 	const bg = await loadImage(__dirname + '/../Assets/pray.png');
 	const img = await loadImage(req.query.image);
@@ -60,11 +60,11 @@ route.get('/pray', async (req, res) => {
 	ctx.drawImage(bg, 0, 0, 396, 275);
 
 	res.set({ 'Content-Type': 'image/png' });
-	return res.send(200).send(canvas.toBuffer());
+	return res.status(200).send(canvas.toBuffer());
 });
 
 route.get('/rifleshoot', async (req, res) => {
-	if (!req.query.image) return res.send(400).send({ error: true, message: 'API: Missing image parameter.' });
+	if (!req.query.image) return res.status(400).send({ error: true, message: 'API: Missing image parameter.' });
 
 	const bg = await loadImage(__dirname + '/../Assets/rifleshoot.png');
 	const img = await loadImage(req.query.image);
@@ -75,11 +75,11 @@ route.get('/rifleshoot', async (req, res) => {
 	ctx.drawImage(bg, 0, 0, 318, 299);
 
 	res.set({ 'Content-Type': 'image/png' });
-	return res.send(200).send(canvas.toBuffer());
+	return res.status(200).send(canvas.toBuffer());
 });
 
 route.get('/pressplay', async (req, res) => {
-	if (!req.query.image) return res.send(400).send({ error: true, message: 'API: Missing image parameter.' });
+	if (!req.query.image) return res.status(400).send({ error: true, message: 'API: Missing image parameter.' });
 
 	const bg = await loadImage(__dirname + '/../Assets/pressplay.png');
 	const img = await loadImage(req.query.image);
@@ -90,11 +90,11 @@ route.get('/pressplay', async (req, res) => {
 	ctx.drawImage(bg, 0, 0, 474, 474);
 
 	res.set({ 'Content-Type': 'image/png' });
-	return res.send(200).send(canvas.toBuffer());
+	return res.status(200).send(canvas.toBuffer());
 });
 
 route.get('/vr', async (req, res) => {
-	if (!req.query.image) return res.send(400).send({ error: true, message: 'API: Missing image parameter.' });
+	if (!req.query.image) return res.status(400).send({ error: true, message: 'API: Missing image parameter.' });
 
 	const bg = await loadImage(__dirname + '/../Assets/vr.png');
 	const img = await loadImage(req.query.image);
@@ -105,11 +105,11 @@ route.get('/vr', async (req, res) => {
 	ctx.drawImage(bg, 0, 0, 780, 768);
 
 	res.set({ 'Content-Type': 'image/png' });
-	return res.send(200).send(canvas.toBuffer());
+	return res.status(200).send(canvas.toBuffer());
 });
 
 route.get('/bestmeme', async (req, res) => {
-	if (!req.query.image) return res.send(400).send({ error: true, message: 'API: Missing image parameter.' });
+	if (!req.query.image) return res.status(400).send({ error: true, message: 'API: Missing image parameter.' });
 
 	const bg = await loadImage(__dirname + '/../Assets/bestmeme.png');
 	const img = await loadImage(req.query.image);
@@ -121,11 +121,14 @@ route.get('/bestmeme', async (req, res) => {
 	ctx.drawImage(bg, 0, 0, 966, 1145);
 
 	res.set({ 'Content-Type': 'image/png' });
-	return res.send(200).send(canvas.toBuffer());
+	return res.status(200).send(canvas.toBuffer());
 });
 
 route.get('/robert', async (req, res) => {
-	if (!req.query.image) return res.send(400).send({ error: true, message: 'API: Missing image parameter.' });
+	
+	// credits to Fafa#6969 
+
+	if (!req.query.image) return res.status(400).send({ error: true, message: 'API: Missing image parameter.' });
 
 	const bg = await loadImage(__dirname + '/../Assets/robert.png');
 	const glasses = await loadImage(__dirname + '/../Assets/glasses.png');
@@ -139,13 +142,13 @@ route.get('/robert', async (req, res) => {
 	ctx.drawImage(bg, 0, 0, 295, 406);
 
 	res.set({ 'Content-Type': 'image/png' });
-	return res.send(200).send(canvas.toBuffer());
+	return res.status(200).send(canvas.toBuffer());
 });
 
 route.get('/saveonlyone', async (req, res) => {
-	if (!req.query.image) return res.send(400).send({ error: true, message: 'API: Missing image parameter.' });
-	if (!req.query.image2) return res.send(400).send({ error: true, message: 'API: Missing image2 parameter.' });
-	if (!req.query.image3) return res.send(400).send({ error: true, message: 'API: Missing image3 parameter.' });
+	if (!req.query.image) return res.status(400).send({ error: true, message: 'API: Missing image parameter.' });
+	if (!req.query.image2) return res.status(400).send({ error: true, message: 'API: Missing image2 parameter.' });
+	if (!req.query.image3) return res.status(400).send({ error: true, message: 'API: Missing image3 parameter.' });
 
 	const bg = await loadImage(__dirname + '/../Assets/saveonlyone.png');
 	const img = await loadImage(req.query.image);
@@ -160,7 +163,7 @@ route.get('/saveonlyone', async (req, res) => {
 	ctx.drawImage(bg, 0, 0, 910, 799);
 
 	res.set({ 'Content-Type': 'image/png' });
-	return res.send(200).send(canvas.toBuffer());
+	return res.status(200).send(canvas.toBuffer());
 });
 
 module.exports = {
